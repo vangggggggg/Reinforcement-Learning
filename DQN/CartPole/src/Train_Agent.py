@@ -111,8 +111,8 @@ for ep in range(n_episodes):
 
         if len(my_agent.replay_buffer) > batch_size:
             my_agent.train_main_network(batch_size)
+            my_agent.main_network.save('train_agent.h5')
 
     if my_agent.epsilon > my_agent.epsilon_min:
         my_agent.epsilon = my_agent.epsilon * my_agent.epsilon_decay_rate
 
-my_agent.main_network.save('train_agent.h5')

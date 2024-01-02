@@ -5,6 +5,7 @@ from collections import deque
 from snake_ai import SnakeGameAI, Direction, Point
 from model import Linear_QNet, QTrainer
 from helper import plot
+
 MAX_MEMORY = 100_000
 BATCH_SIZE = 1000
 LR = 0.001
